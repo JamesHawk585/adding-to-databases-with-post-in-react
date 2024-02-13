@@ -1,0 +1,53 @@
+{
+    "avengers": [
+      {
+        "id": 1,
+        "name": "Captain America",
+        "real_name": "Steve Rogers",
+        "first_appearence": "Captain America #1",
+        "image": "",
+        "powers": "enhanced strength, speed, durability, super-soldier fighting ability"
+      },
+      {
+        "id": 2,
+        "name": "Iron Man",
+        "real_name": "Tony Stark",
+        "first_appearence": "Tales of Suspense #39",
+        "image": "",
+        "powers": "genius-level intellect, powered armor suit"
+      },
+      {
+        "id": 3,
+        "name": "Thor",
+        "real_name": "Thor Odinson",
+        "first_appearence": "Journey into Mystery #83",
+        "image": "",
+        "powers": "superhuman strength, durability, flight, control over lightning"
+      },
+      {
+        "id": 4,
+        "name": "Hulk",
+        "real_name": "Bruce Banner",
+        "first_appearence": "The Incredible Hulk #1",
+        "image": "",
+        "powers": "limitless strength, durability, accelerated healing factor"
+      },
+      {
+        "id": 5,
+        "name": "Black Widow",
+        "real_name": "Natasha Romanoff",
+        "first_appearence": "Tales of Suspense #52",
+        "image": "",
+        "powers": "expert martial artist, espionage expert, advanced weaponry"
+      },
+      {
+        "id": 6,
+        "name": "Hawkeye",
+        "real_name": "Clint Barton",
+        "first_appearence": "Tales of Suspense #57",
+        "image": "",
+        "powers": "master archer, exceptional athlete, expert tactician"
+      }
+    ]
+  }
+  
