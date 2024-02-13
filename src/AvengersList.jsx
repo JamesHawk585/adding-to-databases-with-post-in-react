@@ -1,9 +1,22 @@
 import React from 'react'
+import Card from './Card'
 
-const AvengersList = () => {
+export default function AvengersList( {avengers} ) {
+  const team = avengers.map(avenger => {
+    const { name, image, powers, real_name, first_appearence } = avenger
+    return <Card
+      key={name}
+      name={name}
+      powers={powers}
+      image={image}
+      real_name={real_name}
+      first_appearence={first_appearence}
+      />
+  })
+
+
   return (
-    <div>AvengersList</div>
+    <h2>{team}</h2>
   )
 }
 
-export default AvengersList

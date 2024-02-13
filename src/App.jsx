@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react'
+import './index.css'
+import AvengersList from './AvengersList'
+import Form from './Form'
+
+const backend_url = "http://localhost:3000/avengers"
 
 function App() {
+  const [avengers, setAvengers] = useState([])
+
+  // await keyword is similar to .then
+
+  const assembleAvengers = async () => {
+    const response = await fetch(backend_url).then(r => r.json()/* If it fails, failFunction()*/)
+    setAvengers(response)
+  }
+
+  useEffect(() => {
+    assembleAvengers()
+  })
+
+  const handleSubmit = () => {
+    console.log("Submit Clicked!")
+  } 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <section className="container">
+      <AvengersList avengers={avengers}/>
+    </section>
+  )
+
 }
 
-export default App;
+export default App 
