@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     assembleAvengers()
-  })
+  }, [])
 
   const handleSubmit = () => {
     console.log("Submit Clicked!")

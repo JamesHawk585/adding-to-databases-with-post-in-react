@@ -5,7 +5,7 @@
         "name": "Captain America",
         "real_name": "Steve Rogers",
         "first_appearence": "Captain America #1",
-        "image": "",
+        "image": "https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg",
         "powers": "enhanced strength, speed, durability, super-soldier fighting ability"
       },
       {
@@ -13,7 +13,7 @@
         "name": "Iron Man",
         "real_name": "Tony Stark",
         "first_appearence": "Tales of Suspense #39",
-        "image": "",
+        "image": "https://cdn.britannica.com/49/182849-050-4C7FE34F/scene-Iron-Man.jpg",
         "powers": "genius-level intellect, powered armor suit"
       },
       {
@@ -21,7 +21,7 @@
         "name": "Thor",
         "real_name": "Thor Odinson",
         "first_appearence": "Journey into Mystery #83",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/disney/images/3/3c/Thor_Odinson_-_Profile.png/revision/latest?cb=20220513113709",
         "powers": "superhuman strength, durability, flight, control over lightning"
       },
       {
@@ -29,7 +29,7 @@
         "name": "Hulk",
         "real_name": "Bruce Banner",
         "first_appearence": "The Incredible Hulk #1",
-        "image": "",
+        "image": "https://i.pinimg.com/736x/48/95/0c/48950c19001f2fc7b83d12465112902b.jpg",
         "powers": "limitless strength, durability, accelerated healing factor"
       },
       {
@@ -37,7 +37,7 @@
         "name": "Black Widow",
         "real_name": "Natasha Romanoff",
         "first_appearence": "Tales of Suspense #52",
-        "image": "",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Scarlett_Johansson_as_Black_Widow.jpg/220px-Scarlett_Johansson_as_Black_Widow.jpg",
         "powers": "expert martial artist, espionage expert, advanced weaponry"
       },
       {
@@ -45,7 +45,7 @@
         "name": "Hawkeye",
         "real_name": "Clint Barton",
         "first_appearence": "Tales of Suspense #57",
-        "image": "",
+        "image": "https://hips.hearstapps.com/hmg-prod/images/hawkeye-1625763406.jpeg?crop=0.6666666666666666xw:1xh;center,top&resize=1200:*",
         "powers": "master archer, exceptional athlete, expert tactician"
       }
     ]

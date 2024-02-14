@@ -16,7 +16,9 @@ export default function AvengersList( {avengers} ) {
 
 
   return (
-    <h2>{team}</h2>
+    <>
+      {team}
+    </>
   )
 }
 

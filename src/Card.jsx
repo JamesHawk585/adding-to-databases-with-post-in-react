@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 export default ({ name, real_name, powers, first_appearence, image }) => {
 
+  console.log("image:", image)
 
   return (
     <section className="card">
@@ -9,6 +10,7 @@ export default ({ name, real_name, powers, first_appearence, image }) => {
       <p className="real-name">Secret Identity: {real_name}</p>
       <p className="first-appearence">First Appearence: {first_appearence}</p>
       <p className="powers">Powers: {powers}</p>
+      <img className="image" src={image} alt={name}></img>
     </section>
   )
 }
