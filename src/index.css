@@ -43,3 +43,12 @@ code {
   align-content: center;
   align-self: center;
 }
+
+.new-avenger-h1 {
+  text-align: center;
+}
+
+.button {
+  background-color: black;
+  color:aliceblue
+}

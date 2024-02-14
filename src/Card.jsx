@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 export default ({ name, real_name, powers, first_appearence, image }) => {
 
-  console.log("image:", image)
-
   return (
     <section className="card">
       <h1 className="name">{name}</h1>
