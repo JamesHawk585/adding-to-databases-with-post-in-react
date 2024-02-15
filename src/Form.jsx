@@ -2,14 +2,22 @@ import React, { useState } from "react";
 import "./index.css";
 
 const Form = ({ handleSubmit }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState({
+    name: "",
+    realName: "",
+    firstAppearence: "",
+    image: "",
+    powers: "",
+  });
 
   const handleChange = (e) => {
-    setValue(e.target.value);
+    const ourInput = e.target.name
+    console.log(e.target.value)
+    setValue({ ...value, [ourInput]: e.target.value});
   };
 
-// Add onChange to each input jsx element.
-// 1:29:47  
+  // Add onChange to each input jsx element.
+  // 1:29:47
 
   return (
     <div>
@@ -21,16 +29,41 @@ const Form = ({ handleSubmit }) => {
           onSubmit={(e) => handleSubmit(e)}
         >
           <input
+          name="name"
             placeholder="Avenger Name"
             type="text"
             label="Avenger Name"
             onChange={handleChange}
-            value={value}
+            value={value.name}
           ></input>
-          <input placeholder="Real Name" type="password"></input>
-          <input placeholder="First Appearence" type="text"></input>
-          <input placeholder="Powers" type="text"></input>
-          <input placeholder="Image" type="text"></input>
+          <input
+          name="realName"
+            placeholder="Real Name"
+            type="password"
+            onChange={handleChange}
+            value={value.realName}
+          ></input>
+          <input
+          name="firstAppearence"
+            placeholder="First Appearence"
+            type="text"
+            onChange={handleChange}
+            value={value.firstAppearence}
+          ></input>
+          <input
+          name="powers"
+            placeholder="Powers"
+            type="text"
+            onChange={handleChange}
+            value={value.powers}
+          ></input>
+          <input
+          name="image"
+            placeholder="Image"
+            type="text"
+            onChange={handleChange}
+            value={value.image}
+          ></input>
           <button className="button">Create New Avenger</button>
         </form>
       </section>

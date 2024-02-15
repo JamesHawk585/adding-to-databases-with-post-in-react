@@ -49,18 +49,10 @@
       "powers": "master archer, exceptional athlete, expert tactician"
     },
     {
-      "name": "Sultan of Safety",
-      "real_name": "James Hawk",
-      "first_appearence": "Tales of Suspense #57",
-      "image": "https://cdn.britannica.com/34/197534-050-83C616C4/James-Brown-1991.jpg",
-      "powers": "master archer, exceptional athlete, expert tactician",
       "id": 7
     },
     {
       "id": 8
-    },
-    {
-      "id": 9
     }
   ]
 }
