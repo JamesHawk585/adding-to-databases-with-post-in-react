@@ -24,7 +24,18 @@ code {
   justify-content: center;
   padding: 10px;
   margin: 30px;
+}
 
+.card:hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: goldenrod;
+  border-radius: 8px;
+  width: 50vw;
+  justify-content: center;
+  padding: 10px;
+  margin: 30px;
 }
 
 .containter {

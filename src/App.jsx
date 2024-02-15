@@ -22,19 +22,32 @@ function App() {
   }, []);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    console.log(e.target[0].value);
     const newAvenger = {
-      // id: 1,
       name: e.target[0].value,
       real_name: e.target[1].value,
       first_appearence: e.target[2].value,
       image: e.target[3].value,
-      powers: e.target[4].value
-    }
+      powers: e.target[4].value,
+    };
+    setAvengers((prevAvengers) => [...prevAvengers, newAvenger]);
 
-    setAvengers(prevAvengers => [...prevAvengers, newAvenger])
-    // Why is console.log always one submit behind? 
-    console.log(avengers)
+    addAvenger();
+    // Why is console.log always one submit behind?
+  };
+
+  // POST request here
+  const addAvenger = async () => {
+    console.log("Adding Avenger!🦸‍♂️");
+    const response = await fetch(backend_url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(/*Whatever*/),
+    }).then((r) => r.json());
+    // Code to add avenger to state.
   };
 
   return (
