@@ -49,11 +49,11 @@
       "powers": "master archer, exceptional athlete, expert tactician"
     },
     {
-      "name": "Test",
-      "real_name": "Really a test",
-      "first_appearence": "today",
-      "image": "img.png",
-      "powers": "flight",
+      "name": "Ant Man",
+      "real_name": "Hank Pyam",
+      "first_appearence": "Tales to Astonish #27",
+      "powers": "Size-shifting from nearly microscopic to ~100 feet gigantic (both at extremes) Ability to transfer his size-shifting ability to other beings and objects. Uses Pym particle discs that allow Ant-Man to will himself and other objects to reduce in size or enlarge. Maintains strength of normal size in shrunken state.",
+      "image": "https://images.squarespace-cdn.com/content/v1/52a86cb9e4b098a46d38a18c/1676666661366-8KOZYG533YREMDE5IP4C/ant-man-fan-art-tony-santiago.jpg?format=300w",
       "id": 7
     }
   ]

@@ -31,14 +31,17 @@ function App() {
   };
 
   const handleSubmit = (e) => {
+    console.log(e)
     e.preventDefault();
 
     const newAvenger = {
       name: e.target[0].value,
       real_name: e.target[1].value,
       first_appearence: e.target[2].value,
-      image: e.target[3].value,
-      powers: e.target[4].value,
+      powers: e.target[3].value,
+      image: e.target[4].value
+      // image: e.target[3].value,
+      // powers: e.target[4].value,
     };
 
     console.log("newAvenger Obj:", newAvenger)
