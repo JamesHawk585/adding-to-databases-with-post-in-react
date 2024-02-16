@@ -16,8 +16,17 @@ const Form = ({ handleSubmit }) => {
     setValue({ ...value, [ourInput]: e.target.value});
   };
 
-  // Add onChange to each input jsx element.
-  // 1:29:47
+  const handleReset = () => setValue({
+    name: "",
+    realName: "",
+    firstAppearence: "",
+    image: "",
+    powers: ""
+  })
+
+
+  // Needs form reset
+  // 15:17
 
   return (
     <div>
@@ -26,7 +35,7 @@ const Form = ({ handleSubmit }) => {
         <form
           action=""
           className="avengers-form"
-          onSubmit={(e) => handleSubmit(e)}
+          onSubmit={(e) => handleSubmit(e, handleReset)}
         >
           <input
           name="name"

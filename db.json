@@ -21,7 +21,7 @@
       "name": "Thor",
       "real_name": "Thor Odinson",
       "first_appearence": "Journey into Mystery #83",
-      "image": "https://static.wikia.nocookie.net/disney/images/3/3c/Thor_Odinson_-_Profile.png/revision/latest?cb=20220513113709",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Chris_Hemsworth_as_Thor.jpg/220px-Chris_Hemsworth_as_Thor.jpg",
       "powers": "superhuman strength, durability, flight, control over lightning"
     },
     {
@@ -55,6 +55,22 @@
       "powers": "Size-shifting from nearly microscopic to ~100 feet gigantic (both at extremes) Ability to transfer his size-shifting ability to other beings and objects. Uses Pym particle discs that allow Ant-Man to will himself and other objects to reduce in size or enlarge. Maintains strength of normal size in shrunken state.",
       "image": "https://images.squarespace-cdn.com/content/v1/52a86cb9e4b098a46d38a18c/1676666661366-8KOZYG533YREMDE5IP4C/ant-man-fan-art-tony-santiago.jpg?format=300w",
       "id": 7
+    },
+    {
+      "name": "Spider Man",
+      "real_name": "Peter Parker",
+      "first_appearence": "Amazing Fantasy #15",
+      "powers": "Peter Parker has superhuman spider-powers and abilities derived from mutations resulting from the bite of a radioactive spider.[112] Since the original Lee-Ditko stories, Spider-Man has had the ability to cling to walls. This has been speculated to be based on a distance-dependent interaction between his body and surfaces, known as the van der Waals force,[113] though in the 2002 Spider-Man film, his hands and feet are lined with tiny clinging cilia in the manner of a real spider's feet. Spider-Man's other powers include superhuman strength, agility, and balance and a precognitive sixth sense referred to as his \"spider-sense\", which alerts him to danger.[",
+      "image": "https://wallpapers.com/images/high/spider-man-pictures-5w0w2tw73d597tn3.webp",
+      "id": 8
+    },
+    {
+      "name": "Test",
+      "real_name": "a",
+      "first_appearence": "s",
+      "powers": "d",
+      "image": "f",
+      "id": 9
     }
   ]
 }

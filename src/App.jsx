@@ -30,7 +30,7 @@ function App() {
     setAvengers([...avengers, response])
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e, handleReset) => {
     console.log(e)
     e.preventDefault();
 
@@ -48,6 +48,10 @@ function App() {
     // setAvengers((prevAvengers) => [...prevAvengers, newAvenger]);
 
     addAvenger(newAvenger);
+
+    handleReset()
+
+
   };
 
 
