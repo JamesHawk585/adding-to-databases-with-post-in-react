@@ -8,12 +8,9 @@ const backend_url = "http://localhost:3000/avengers";
 function App() {
   const [avengers, setAvengers] = useState([]);
 
-  // await keyword is similar to .then
-
   const assembleAvengers = async () => {
     const response = await fetch(backend_url).then(
-      (r) => r.json() /* If it fails, failFunction()*/
-    );
+      (r) => r.json());
     setAvengers(response);
   };
 
@@ -21,9 +18,21 @@ function App() {
     assembleAvengers();
   }, []);
 
+  // Add avenger is persisting an empty object to db.json. 
+  const addAvenger = async (avengerData) => {
+    const response = await fetch(backend_url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(avengerData),
+    }).then((r) => r.json());
+    setAvengers([...avengers, response])
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target[0].value);
+
     const newAvenger = {
       name: e.target[0].value,
       real_name: e.target[1].value,
@@ -31,24 +40,13 @@ function App() {
       image: e.target[3].value,
       powers: e.target[4].value,
     };
-    setAvengers((prevAvengers) => [...prevAvengers, newAvenger]);
 
-    addAvenger();
-    // Why is console.log always one submit behind?
+    console.log("newAvenger Obj:", newAvenger)
+    // setAvengers((prevAvengers) => [...prevAvengers, newAvenger]);
+
+    addAvenger(newAvenger);
   };
 
-  // POST request here
-  const addAvenger = async () => {
-    console.log("Adding Avenger!🦸‍♂️");
-    const response = await fetch(backend_url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(/*Whatever*/),
-    }).then((r) => r.json());
-    // Code to add avenger to state.
-  };
 
   return (
     <>

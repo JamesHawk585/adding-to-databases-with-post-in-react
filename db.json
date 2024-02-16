@@ -49,10 +49,12 @@
       "powers": "master archer, exceptional athlete, expert tactician"
     },
     {
+      "name": "Test",
+      "real_name": "Really a test",
+      "first_appearence": "today",
+      "image": "img.png",
+      "powers": "flight",
       "id": 7
-    },
-    {
-      "id": 8
     }
   ]
 }
