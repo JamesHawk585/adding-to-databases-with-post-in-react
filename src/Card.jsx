@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 
-export default ({ name, real_name, powers, first_appearence, image, avengerId, handleDelete }) => {
+export default ({ name, real_name, powers, first_appearence, image, avenger_id, handleDelete }) => {
 
 
   return (
@@ -10,7 +10,7 @@ export default ({ name, real_name, powers, first_appearence, image, avengerId, h
       <p className="real-name">Secret Identity: {real_name}</p>
       <p className="first-appearence">First Appearence: {first_appearence}</p>
       <p className="powers">Powers: {powers}</p>
-      <button className="deleteButton" onClick={() => handleDelete(avengerId)}>Delete Avenger</button>
+      <button className="deleteButton" onClick={() => handleDelete(avenger_id)}>Delete Avenger</button>
     </section>
   )
 }

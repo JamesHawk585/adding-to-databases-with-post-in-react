@@ -8,6 +8,7 @@ const backend_url = "http://localhost:3000/avengers";
 function App() {
   const [avengers, setAvengers] = useState([]);
 
+
   const assembleAvengers = async () => {
     const response = await fetch(backend_url).then(
       (r) => r.json());
@@ -50,19 +51,9 @@ function App() {
 
   };
 
-  const handleDelete = (avengerId) => {
+  const handleDelete = (avenger_id) => {
     // Where are we getting avengerId from? 
-    return setAvengers(avengers.filter(avenger => avenger.id !== avengerId))
-
-    // Incomplete delete request 
-    // useEffect(() => {
-    //   fetch(backend_url, {
-    //     method: "DELETE",
-    //     headers: {
-    //     "Content-Type": "application/json"
-    //     }
-    //   })
-    // })
+    return setAvengers(avengers.filter(avenger => avenger.id !== avenger_id))
   }
 
 
