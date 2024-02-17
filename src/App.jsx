@@ -56,12 +56,15 @@ function App() {
     const response = await fetch(`${backend_url}/${avenger_id}`, {method:  "DELETE"})
   }
 
+  const handleEditAvenger = () => {
+    console.log("handleEditAvenger()")
+  }
 
   return (
     <>
       <Form handleSubmit={handleSubmit} />
       <section className="container">
-        <AvengersList avengers={avengers} handleDelete={handleDelete}/>
+        <AvengersList avengers={avengers} handleDelete={handleDelete} handleEditAvenger={handleEditAvenger}/>
       </section>
     </>
   );
