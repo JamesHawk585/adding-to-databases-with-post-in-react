@@ -9,6 +9,7 @@ export default ({ name, real_name, powers, first_appearence, image }) => {
       <p className="real-name">Secret Identity: {real_name}</p>
       <p className="first-appearence">First Appearence: {first_appearence}</p>
       <p className="powers">Powers: {powers}</p>
+      <button className="deleteButton">Delete Avenger</button>
     </section>
   )
 }

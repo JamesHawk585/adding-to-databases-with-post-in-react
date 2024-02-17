@@ -40,12 +40,9 @@ function App() {
       first_appearence: e.target[2].value,
       powers: e.target[3].value,
       image: e.target[4].value
-      // image: e.target[3].value,
-      // powers: e.target[4].value,
     };
 
     console.log("newAvenger Obj:", newAvenger)
-    // setAvengers((prevAvengers) => [...prevAvengers, newAvenger]);
 
     addAvenger(newAvenger);
 

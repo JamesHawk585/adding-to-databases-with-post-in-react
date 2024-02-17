@@ -43,7 +43,8 @@ body {
   border-radius: 4px;
   padding: 20px;
   transition: all 0.3s ease-in;
-  margin: 50px;
+  margin: 40px;
+  position: relative;
 }
 .card > * {
   padding: 10px;
@@ -79,4 +80,15 @@ body {
 .button {
   background-color: black;
   color: aliceblue;
+}
+
+.deleteButton {
+  display: flex;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 40px;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 15px;
+  ;
 }
