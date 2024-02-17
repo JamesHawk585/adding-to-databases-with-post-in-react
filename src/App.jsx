@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext, createContext } from "react";
 import "./index.css";
 import AvengersList from "./AvengersList";
 import Form from "./Form";
@@ -18,7 +18,6 @@ function App() {
     assembleAvengers();
   }, []);
 
-  // Add avenger is persisting an empty object to db.json. 
   const addAvenger = async (avengerData) => {
     const response = await fetch(backend_url, {
       method: "POST",
@@ -51,12 +50,27 @@ function App() {
 
   };
 
+  const handleDelete = (avengerId) => {
+    // Where are we getting avengerId from? 
+    return setAvengers(avengers.filter(avenger => avenger.id !== avengerId))
+
+    // Incomplete delete request 
+    // useEffect(() => {
+    //   fetch(backend_url, {
+    //     method: "DELETE",
+    //     headers: {
+    //     "Content-Type": "application/json"
+    //     }
+    //   })
+    // })
+  }
+
 
   return (
     <>
       <Form handleSubmit={handleSubmit} />
       <section className="container">
-        <AvengersList avengers={avengers} />
+        <AvengersList avengers={avengers} handleDelete={handleDelete}/>
       </section>
     </>
   );
