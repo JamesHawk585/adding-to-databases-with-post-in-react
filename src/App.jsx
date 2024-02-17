@@ -8,10 +8,8 @@ const backend_url = "http://localhost:3000/avengers";
 function App() {
   const [avengers, setAvengers] = useState([]);
 
-
   const assembleAvengers = async () => {
-    const response = await fetch(backend_url).then(
-      (r) => r.json());
+    const response = await fetch(backend_url).then((r) => r.json());
     setAvengers(response);
   };
 
@@ -27,11 +25,11 @@ function App() {
       },
       body: JSON.stringify(avengerData),
     }).then((r) => r.json());
-    setAvengers([...avengers, response])
+    setAvengers([...avengers, response]);
   };
 
   const handleSubmit = (e, handleReset) => {
-    console.log(e)
+    console.log(e);
     e.preventDefault();
 
     const newAvenger = {
@@ -39,32 +37,48 @@ function App() {
       real_name: e.target[1].value,
       first_appearence: e.target[2].value,
       powers: e.target[3].value,
-      image: e.target[4].value
+      image: e.target[4].value,
     };
 
-    console.log("newAvenger Obj:", newAvenger)
+    console.log("newAvenger Obj:", newAvenger);
 
     addAvenger(newAvenger);
 
-    handleReset()
-
-
+    handleReset();
   };
 
-  const handleDelete = async (avenger_id) => { 
-    setAvengers(avengers.filter(avenger => avenger.id !== avenger_id))
-    const response = await fetch(`${backend_url}/${avenger_id}`, {method:  "DELETE"})
-  }
+  const handleDelete = async (avenger_id) => {
+    setAvengers(avengers.filter((avenger) => avenger.id !== avenger_id));
+    const response = await fetch(`${backend_url}/${avenger_id}`, {
+      method: "DELETE",
+    });
+  };
 
-  const handleEditAvenger = () => {
-    console.log("handleEditAvenger()")
-  }
+  const handleEditAvenger = async (avenger_id) => {
+
+    
+    // This will edit the db
+    // It also needs to change the DOM and revert our toggle 
+    // 1:14:00
+
+
+    const response = await fetch(`${backend_url}/${avenger_id}`, {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(ourData),
+    });
+    console.log("handleEditAvenger()");
+  };
 
   return (
     <>
       <Form handleSubmit={handleSubmit} />
       <section className="container">
-        <AvengersList avengers={avengers} handleDelete={handleDelete} handleEditAvenger={handleEditAvenger}/>
+        <AvengersList
+          avengers={avengers}
+          handleDelete={handleDelete}
+          handleEditAvenger={handleEditAvenger}
+        />
       </section>
     </>
   );

@@ -12,15 +12,14 @@ export default ({
 }) => {
   const [editToggle, setEditToggle] = useState(false);
     const [value, setValue] = useState({
-      name: name,
-      realName: real_name,
+      name,
+      real_name,
       firstAppearence: first_appearence,
-      image: image,
-      powers: powers,
+      image,
+      powers,
     });
 
   const handleEdit = () => {
-    console.log("handleEdit()");
     setEditToggle(true);
   };
   
@@ -31,12 +30,18 @@ export default ({
     };
   
     const handleReset = () => setValue({
-      name: "",
-      realName: "",
-      firstAppearence: "",
-      image: "",
-      powers: ""
+      name,
+      real_name,
+      first_appearence,
+      image,
+      powers
     })
+
+    const handleSubmit = (e, handleReset) => {
+      console.log("handleSumbit()")
+      e.preventDefualt()
+      handleEditAvenger()
+    }
 
   return (
     <section className="card">
@@ -45,7 +50,7 @@ export default ({
           <form
             action=""
             className="avengers-form"
-            onSubmit={(e) => handleSubmit(e, handleReset)}
+            onSubmit={() => handleEditAvenger()}
           >
             <input
               name="name"
@@ -83,7 +88,7 @@ export default ({
               onChange={handleChange}
               value={value.image}
             ></input>
-            <button className="button">Create New Avenger</button>
+            <button className="button">Edit Avenger</button>
           </form>
         </>
       ) : (
