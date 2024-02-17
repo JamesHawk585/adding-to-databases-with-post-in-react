@@ -33,20 +33,20 @@
       "powers": "limitless strength, durability, accelerated healing factor"
     },
     {
-      "id": 5,
-      "name": "Black Widow",
-      "real_name": "Natasha Romanoff",
-      "first_appearence": "Tales of Suspense #52",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Scarlett_Johansson_as_Black_Widow.jpg/220px-Scarlett_Johansson_as_Black_Widow.jpg",
-      "powers": "expert martial artist, espionage expert, advanced weaponry"
-    },
-    {
       "id": 6,
       "name": "Hawkeye",
       "real_name": "Clint Barton",
       "first_appearence": "Tales of Suspense #57",
       "image": "https://hips.hearstapps.com/hmg-prod/images/hawkeye-1625763406.jpeg?crop=0.6666666666666666xw:1xh;center,top&resize=1200:*",
       "powers": "master archer, exceptional athlete, expert tactician"
+    },
+    {
+      "name": "Spider Man ",
+      "real_name": "Peter PArker",
+      "first_appearence": "Tales to Astonish #27",
+      "powers": "Webs",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1817070/ss_dfba6f2477bfa42be69ddfdffbd421d3943d20bf.600x338.jpg?t=1700663145",
+      "id": 7
     }
   ]
 }

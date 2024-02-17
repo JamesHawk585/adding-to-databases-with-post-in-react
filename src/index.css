@@ -90,5 +90,16 @@ body {
   align-self: flex-end;
   position: absolute;
   bottom: 15px;
-  ;
+
+}
+
+.editButton {
+  display: flex;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 40px;
+  align-self: flex-start;
+  position: absolute;
+  bottom: 15px;
+
 }

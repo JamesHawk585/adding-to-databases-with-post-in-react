@@ -1,8 +1,52 @@
 {
-    "name": "Test",
-    "real_name": "a",
-    "first_appearence": "a",
-    "powers": "a",
-    "image": "a",
-    "id": 9
-  }
+  "avengers": [
+    {
+      "id": 1,
+      "name": "Captain America",
+      "real_name": "Steve Rogers",
+      "first_appearence": "Captain America #1",
+      "image": "https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg",
+      "powers": "enhanced strength, speed, durability, super-soldier fighting ability"
+    },
+    {
+      "id": 2,
+      "name": "Iron Man",
+      "real_name": "Tony Stark",
+      "first_appearence": "Tales of Suspense #39",
+      "image": "https://cdn.britannica.com/49/182849-050-4C7FE34F/scene-Iron-Man.jpg",
+      "powers": "genius-level intellect, powered armor suit"
+    },
+    {
+      "id": 3,
+      "name": "Thor",
+      "real_name": "Thor Odinson",
+      "first_appearence": "Journey into Mystery #83",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Chris_Hemsworth_as_Thor.jpg/220px-Chris_Hemsworth_as_Thor.jpg",
+      "powers": "superhuman strength, durability, flight, control over lightning"
+    },
+    {
+      "id": 4,
+      "name": "Hulk",
+      "real_name": "Bruce Banner",
+      "first_appearence": "The Incredible Hulk #1",
+      "image": "https://i.pinimg.com/736x/48/95/0c/48950c19001f2fc7b83d12465112902b.jpg",
+      "powers": "limitless strength, durability, accelerated healing factor"
+    },
+    {
+      "id": 6,
+      "name": "Hawkeye",
+      "real_name": "Clint Barton",
+      "first_appearence": "Tales of Suspense #57",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/hawkeye-1625763406.jpeg?crop=0.6666666666666666xw:1xh;center,top&resize=1200:*",
+      "powers": "master archer, exceptional athlete, expert tactician"
+    },
+    {
+      "name": "Spider Man ",
+      "real_name": "Peter PArker",
+      "first_appearence": "Tales to Astonish #27",
+      "powers": "Webs",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1817070/ss_dfba6f2477bfa42be69ddfdffbd421d3943d20bf.600x338.jpg?t=1700663145",
+      "id": 7
+    }
+  ]
+}
