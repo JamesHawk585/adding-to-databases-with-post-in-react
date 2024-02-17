@@ -51,9 +51,9 @@ function App() {
 
   };
 
-  const handleDelete = (avenger_id) => {
-    // Where are we getting avengerId from? 
-    return setAvengers(avengers.filter(avenger => avenger.id !== avenger_id))
+  const handleDelete = async (avenger_id) => { 
+    setAvengers(avengers.filter(avenger => avenger.id !== avenger_id))
+    const response = await fetch(`${backend_url}/${avenger_id}`, {method:  "DELETE"})
   }
 
 
