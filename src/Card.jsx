@@ -88,7 +88,8 @@ export default ({
               onChange={handleChange}
               value={value.image}
             ></input>
-            <button className="button">Edit Avenger</button>
+            <button className="editAvengerButton">Edit Avenger</button>
+            <button name="backToCardFromEditFormButton" className="backToCardFromEditFormButton" onClick={() => handleEdit()}>Card</button>
           </form>
         </>
       ) : (
