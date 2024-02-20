@@ -19,7 +19,7 @@ export default ({
       powers,
     });
 
-  const handleEdit = () => {
+  const handleEditToggle = () => {
     setEditToggle(true);
   };
   
@@ -37,10 +37,10 @@ export default ({
       powers
     })
 
-    const handleSubmit = (e, handleReset) => {
-      console.log("handleSumbit()")
-      e.preventDefualt()
-      handleEditAvenger()
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log(e)
+      handleEditAvenger(e, handleReset, avenger_id);
     }
 
   return (
@@ -50,7 +50,7 @@ export default ({
           <form
             action=""
             className="avengers-form"
-            onSubmit={() => handleEditAvenger()}
+            onSubmit={(e) => handleSubmit(e)}
           >
             <input
               name="name"
@@ -61,14 +61,14 @@ export default ({
               value={value.name}
             ></input>
             <input
-              name="realName"
+              name="real_name"
               placeholder="Real Name"
               type="password"
               onChange={handleChange}
-              value={value.realName}
+              value={value.real_name}
             ></input>
             <input
-              name="firstAppearence"
+              name="first_appearence"
               placeholder="First Appearence"
               type="text"
               onChange={handleChange}
@@ -88,8 +88,8 @@ export default ({
               onChange={handleChange}
               value={value.image}
             ></input>
-            <button className="editAvengerButton">Edit Avenger</button>
-            <button name="backToCardFromEditFormButton" className="backToCardFromEditFormButton" onClick={() => handleEdit()}>Card</button>
+            <button className="editAvengerButton" onSubmit={(e) => handleSubmit(e)}>Edit Avenger</button>
+            {/* <button name="backToCardFromEditFormButton" className="backToCardFromEditFormButton" onClick={() => handleEditToggle()}>Card</button> */}
           </form>
         </>
       ) : (
@@ -111,7 +111,7 @@ export default ({
           <button
             name="edit"
             className="editButton"
-            onClick={() => handleEdit()}
+            onClick={() => handleEditToggle()}
           >
             Edit
           </button>

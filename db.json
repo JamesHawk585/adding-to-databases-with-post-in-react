@@ -9,14 +9,6 @@
       "powers": "enhanced strength, speed, durability, super-soldier fighting ability"
     },
     {
-      "id": 2,
-      "name": "Iron Man",
-      "real_name": "Tony Stark",
-      "first_appearence": "Tales of Suspense #39",
-      "image": "https://cdn.britannica.com/49/182849-050-4C7FE34F/scene-Iron-Man.jpg",
-      "powers": "genius-level intellect, powered armor suit"
-    },
-    {
       "id": 3,
       "name": "Thor",
       "real_name": "Thor Odinson",

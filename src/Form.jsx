@@ -25,9 +25,6 @@ const Form = ({ handleSubmit }) => {
   })
 
 
-  // Needs form reset
-  // 15:17
-
   return (
     <div>
       <section className="form-container">

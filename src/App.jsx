@@ -2,6 +2,7 @@ import { useState, useEffect, useContext, createContext } from "react";
 import "./index.css";
 import AvengersList from "./AvengersList";
 import Form from "./Form";
+import Card from "./Card";
 
 const backend_url = "http://localhost:3000/avengers";
 
@@ -54,20 +55,31 @@ function App() {
     });
   };
 
-  const handleEditAvenger = async (avenger_id) => {
 
+  const handleEditAvenger = async (e, handleReset, avenger_id) => {
+    console.log(e)
+    console.log(avenger_id)
     
+    console.log(handleReset)
     // This will edit the db
     // It also needs to change the DOM and revert our toggle 
     // 1:14:00
 
+    // 1. Click the button
+    // 2. Gather info
+    // 3. Persist to db
+    // 4. chnage avengers state 
+    // 5. Revert form to display with new avenger data 
 
-    const response = await fetch(`${backend_url}/${avenger_id}`, {
-      method: "PATCH",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(ourData),
-    });
-    console.log("handleEditAvenger()");
+
+  //   const response = await fetch(`${backend_url}/${avenger_id}`, {
+  //     method: "PATCH",
+  //     headers: { 
+  //       "Content-type": "application/json" 
+  //     },
+  //     body: JSON.stringify(ourData),
+  //   });
+  //   console.log("editAvenger()");
   };
 
   return (
