@@ -11,37 +11,37 @@ export default ({
   handleEditAvenger,
 }) => {
   const [editToggle, setEditToggle] = useState(false);
-    const [value, setValue] = useState({
-      name,
-      real_name,
-      firstAppearence: first_appearence,
-      image,
-      powers,
-    });
+  const [value, setValue] = useState({
+    name,
+    real_name,
+    firstAppearence: first_appearence,
+    image,
+    powers,
+  });
 
   const handleEditToggle = () => {
     setEditToggle(true);
   };
-  
-    const handleChange = (e) => {
-      const ourInput = e.target.name
-      console.log(e.target.value)
-      setValue({ ...value, [ourInput]: e.target.value});
-    };
-  
-    const handleReset = () => setValue({
+
+  const handleChange = (e) => {
+    const ourInput = e.target.name;
+    console.log(e.target.value);
+    setValue({ ...value, [ourInput]: e.target.value });
+  };
+
+  const handleReset = () =>
+    setValue({
       name,
       real_name,
       first_appearence,
       image,
-      powers
-    })
+      powers,
+    });
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      console.log(e)
-      handleEditAvenger(e, handleReset, avenger_id);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleEditAvenger(e, handleReset, avenger_id, setEditToggle);
+  };
 
   return (
     <section className="card">
@@ -88,7 +88,12 @@ export default ({
               onChange={handleChange}
               value={value.image}
             ></input>
-            <button className="editAvengerButton" onSubmit={(e) => handleSubmit(e)}>Edit Avenger</button>
+            <button
+              className="editAvengerButton"
+              onSubmit={(e) => handleSubmit(e)}
+            >
+              Edit Avenger
+            </button>
             {/* <button name="backToCardFromEditFormButton" className="backToCardFromEditFormButton" onClick={() => handleEditToggle()}>Card</button> */}
           </form>
         </>

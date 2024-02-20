@@ -55,31 +55,43 @@ function App() {
     });
   };
 
+  const handleEditAvenger = async (
+    e,
+    handleReset,
+    avenger_id,
+    setEditToggle
+  ) => {
 
-  const handleEditAvenger = async (e, handleReset, avenger_id) => {
-    console.log(e)
-    console.log(avenger_id)
-    
-    console.log(handleReset)
+    const editedAvengerObject = {
+      name: e.target[0].value,
+      real_name: e.target[1].value,
+      first_appearence: e.target[2].value,
+      powers: e.target[3].value,
+      image: e.target[4].value,
+    };
+
+    console.log(editedAvengerObject)
     // This will edit the db
-    // It also needs to change the DOM and revert our toggle 
+    // It also needs to change the DOM and revert our toggle
     // 1:14:00
 
     // 1. Click the button
     // 2. Gather info
     // 3. Persist to db
-    // 4. chnage avengers state 
-    // 5. Revert form to display with new avenger data 
+    // 4. chnage avengers state
+    // 5. Revert form to display with new avenger data
 
-
-  //   const response = await fetch(`${backend_url}/${avenger_id}`, {
-  //     method: "PATCH",
-  //     headers: { 
-  //       "Content-type": "application/json" 
-  //     },
-  //     body: JSON.stringify(ourData),
-  //   });
-  //   console.log("editAvenger()");
+    const response = await fetch(`${backend_url}/${avenger_id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(editedAvengerObject)
+    });
+    // .then(setAvengers()));
+    console.log("Response from edit:", response);
+    setEditToggle(false)
+    handleReset()
   };
 
   return (
